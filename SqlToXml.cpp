@@ -18,13 +18,13 @@ bool SqlToXml::GetStatementBySql(string path)
 		m_sqlPath = path;
 	}
 
-	writeFile("INFO",(m_sqlPath+" File Load Start...").c_str());
 	ifstream fin(m_sqlPath.c_str());
 	if (!fin.is_open())
 	{
 		return false;
 	}
 	
+	writeFile("INFO",(m_sqlPath+" File Dispose Start...").c_str());
 	string statement="";
 	while (!fin.eof())
 	{
@@ -60,7 +60,9 @@ bool SqlToXml::GetStatementBySql(string path)
 			}
 		}
 	}
-	writeFile("INFO",(m_sqlPath+" File Load Success!").c_str());
+	if(m_vecStatement.size()>0)
+		writeFile("SUCCESS",(m_sqlPath+" File Load Success!").c_str());
+	else writeFile("WARN",(m_sqlPath+" File Load Error!").c_str());
 	return true;
 }
 
@@ -190,7 +192,7 @@ void SqlToXml::CreateXml()
 	xmlPath = xmlPath + xml;
 
 	doc->SaveFile(xmlPath.c_str());
-	writeFile("INFO",(xmlPath+" File Create Success!").c_str());
+	writeFile("SUCCESS",(xmlPath+" File Create Success!").c_str());
 }
 
 void SqlToXml::DatabaseName(string &name, TiXmlElement* database)

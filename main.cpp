@@ -33,6 +33,7 @@ int main(int argc,char *argv[])
 	    sqlPath = argv[i];
 	    
 	    // 先判断文件是否存在
+	    // windows下，是io.h文件，linux下是 unistd.h文件 
 	    // int access(const char *pathname, int mode);
 	    if(-1==access(sqlPath.c_str(),F_OK))
 	    {
@@ -64,15 +65,17 @@ int main(int argc,char *argv[])
 	#ifdef linux
  		// 先执行Linux下的sed命令，把打开的文件转为linux下的文件
 	    // windows下换行符有:\r\n,Linux下换行符只有:\n,Unix下只有:\r
+	    writeFile("INFO","Linux,Start Format File...");
 	    string str_command="sed -i 's/\r//' ";
 	    str_command = str_command+sqlPath;
 	    system(str_command.c_str());
+	    writeFile("SUCCESS","Linux,Format File Success!");
 	#endif
 
 	    SqlToXml sqlToXml;
 	    if (!sqlToXml.GetStatementBySql(sqlPath))
 	    {
-			writeFile("ERROR",(sqlPath+" File Load Error").c_str());
+			writeFile("ERROR",(sqlPath+" File Load Fail!").c_str());
 			continue;
 	    }
 	    sqlToXml.CreateXml();
