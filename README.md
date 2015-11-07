@@ -1,31 +1,31 @@
-¹ØÓÚ×÷Õß£º
-ÕÔ³ÐÖ¾,C++·þÎñÆ÷¿ª·¢\ÖÐ¼ä¼þ\redis£¬Ä¿Ç°ÔÚÖ°,email:karl.zhao@qq.com
- 
-¹ØÓÚ¹¦ÄÜ£º
-1.ÕâÊÇÒ»¸öSQLÎÄ¼þ×ªXMLµÄ¹¤¾ß£¬Ö÷ÒªÊÇMySqlµ¼³öÀ´µÄsqlÎÄ¼þ£¨Linuxµ¼³öÀ´£¬Ä¬ÈÏ±àÂëÎªUTF-8£©×ª³ÉXMLÎÄ¼þ;
-2.Ö§³Ö¶àÎÄ¼þÍ¬Ê±×ª»»;
-3.Ôö¼ÓÈÕÖ¾ÎÄµµ£¬ÈÕÖ¾ÎÄµµ¸ù¾ÝÄêÔÂÈÕÀ´´´½¨;
+ï»¿#ä½œè€…ï¼š
+æ©™å­,C++æœåŠ¡å™¨å¼€å‘\ä¸­é—´ä»¶\redisï¼Œç›®å‰åœ¨èŒ,email:karl.zhao@qq.com  
 
-¹ØÓÚ±àÂë£º
-1.ÕâÀïµÄËùÓÐÔ´Âë¶¼ÊÇANSI±àÂë¸ñÊ½£»
-2.sqlÎÄ¼þ±àÂë£¬Èç¹ûsqlÎÄ¼þÊÇANSI±àÂë£¬ÄÇ×ªµÄxmlÎÄ¼þÒ²ÊÇANSI±àÂë£¬Ä¿Ç°Õâ¸ö¹¤¾ß£¬Ö§³Öansi¡¢utf-8µÄ×ª»»¡£
+#åŠŸèƒ½ï¼š
+1.è¿™æ˜¯ä¸€ä¸ªSQLæ–‡ä»¶è½¬XMLçš„å·¥å…·ï¼Œä¸»è¦æ˜¯MySqlå¯¼å‡ºæ¥çš„sqlæ–‡ä»¶ï¼ˆLinuxå¯¼å‡ºæ¥ï¼Œé»˜è®¤ç¼–ç ä¸ºUTF-8ï¼‰è½¬æˆXMLæ–‡ä»¶;  
+2.æ”¯æŒå¤šæ–‡ä»¶åŒæ—¶è½¬æ¢;  
+3.å¢žåŠ æ—¥å¿—æ–‡æ¡£ï¼Œæ—¥å¿—æ–‡æ¡£æ ¹æ®å¹´æœˆæ—¥æ¥åˆ›å»º;
 
-¹ØÓÚÔËÐÐ»·¾³£º
-1.windowsÏÂ£¬Ê¹ÓÃC-free IDEÄ¬ÈÏµÄmingw5(Ä¬ÈÏ±àÒëÆ÷ÊÇgcc¡¢g++)£¬³É¹¦±àÒëÇÒÔËÐÐ;
-2.Linux£¬¿ÉÖ±½ÓÔËÐÐmakefileÎÄ¼þ£¬Éú³Ésql2xmlÖ´ÐÐÎÄ¼þ£¬¿ÉÖ±½ÓÔËÐÐ.
+#å…³äºŽç¼–ç ï¼š
+1.è¿™é‡Œçš„æ‰€æœ‰æºç éƒ½æ˜¯ANSIç¼–ç æ ¼å¼;  
+2.sqlæ–‡ä»¶ç¼–ç ï¼Œå¦‚æžœsqlæ–‡ä»¶æ˜¯ANSIç¼–ç ï¼Œé‚£è½¬çš„xmlæ–‡ä»¶ä¹Ÿæ˜¯ANSIç¼–ç ï¼Œç›®å‰è¿™ä¸ªå·¥å…·ï¼Œæ”¯æŒansiã€utf-8çš„è½¬æ¢ã€‚  
 
-¹ØÓÚÎÄ¼þ£º
-1. main.cpp
-2. SimpleLog.h£º¼òµ¥µÄÈÕÖ¾²Ù×÷º¯ÊýµÄÉùÃ÷ÎÄ¼þ
-3. SimpleLog.cpp£º¼òµ¥µÄÈÕÖ¾²Ù×÷º¯ÊýµÄÊµÏÖÎÄ¼þ
-4. SqlToXml.h£ºSqlToXmlÎÄ¼þÀà
-5. SqlToXml.cpp£ºSqlToXmlÎÄ¼þÀà°üÀ¨½âÎösqlÎÄ¼þ£¬´´½¨xmlÎÄ¼þµÄ²Ù×÷
-6. tinystr.h£ºxmlÎÄ¼þµÄ×Ö·ûÀà
-7. tinystr.cpp£ºxmlÎÄ¼þµÄ×Ö·ûÀàµÄÊµÏÖ
-8. tinyxml.h£ºxmlÀà
-9. tinyxml.cpp£ºxmlÀàµÄÊµÏÖ
-10.tinyxmlerror.cpp£ºxmlµÄÒì³£
-11.tinyxmlparser.cpp£ºXMLµÄ·ÖÎöÆ÷
-12.demo.sql : ²âÊÔËùÓÃµÄsqlÎÄ¼þ
+#å…³äºŽè¿è¡ŒçŽ¯å¢ƒï¼š
+1.windowsä¸‹ï¼Œä½¿ç”¨C-free IDEé»˜è®¤çš„mingw5(é»˜è®¤ç¼–è¯‘å™¨æ˜¯gccã€g++)ï¼ŒæˆåŠŸç¼–è¯‘ä¸”è¿è¡Œ;  
+2.Linuxï¼Œå¯ç›´æŽ¥è¿è¡Œmakefileæ–‡ä»¶ï¼Œç”Ÿæˆsql2xmlæ‰§è¡Œæ–‡ä»¶ï¼Œå¯ç›´æŽ¥è¿è¡Œ.  
 
-ÆäÖÐ6-10ºÅÎÄ¼þ£¬ÊÇTinyXML¿âÎÄ¼þ
+#å…³äºŽæ–‡ä»¶ï¼š
+1. main.cpp  
+2. SimpleLog.hï¼šç®€å•çš„æ—¥å¿—æ“ä½œå‡½æ•°çš„å£°æ˜Žæ–‡ä»¶  
+3. SimpleLog.cppï¼šç®€å•çš„æ—¥å¿—æ“ä½œå‡½æ•°çš„å®žçŽ°æ–‡ä»¶   
+4. SqlToXml.hï¼šSqlToXmlæ–‡ä»¶ç±»   
+5. SqlToXml.cppï¼šSqlToXmlæ–‡ä»¶ç±»åŒ…æ‹¬è§£æžsqlæ–‡ä»¶ï¼Œåˆ›å»ºxmlæ–‡ä»¶çš„æ“ä½œ  
+6. tinystr.hï¼šxmlæ–‡ä»¶çš„å­—ç¬¦ç±»   
+7. tinystr.cppï¼šxmlæ–‡ä»¶çš„å­—ç¬¦ç±»çš„å®žçŽ°   
+8. tinyxml.hï¼šxmlç±»   
+9. tinyxml.cppï¼šxmlç±»çš„å®žçŽ°   
+10.tinyxmlerror.cppï¼šxmlçš„å¼‚å¸¸   
+11.tinyxmlparser.cppï¼šXMLçš„åˆ†æžå™¨   
+12.demo.sql : æµ‹è¯•æ‰€ç”¨çš„sqlæ–‡ä»¶   
+
+å…¶ä¸­6-10å·æ–‡ä»¶ï¼Œæ˜¯TinyXMLåº“æ–‡ä»¶  
