@@ -30,7 +30,7 @@ int getTime(char *out, int fmt)
 }
 /*
     功能：     初始化日志文件
-    返回值：    1-成功，-1-失败
+    返回值：    1-成功，0-失败
 */ 
 int openFile()
 {
@@ -46,7 +46,7 @@ int openFile()
 	curtime[len+4]='\0';
     }
     fp = fopen(curtime, "a");
-    if(fp==NULL)return -1;
+    if(fp==NULL)return 0;
     return 1;
 }
 
@@ -66,7 +66,21 @@ int writeFile(const char *head,const char *str)
     
     if(ret >= 0)
     {
-	printf("[%s] %s\n",head,str);
+	printf("[%s][%s] %s\n",curTime,head,str);
+        fflush(fp);
+        return 0;               // 写文件成功
+    }
+    else
+        return -1;
+}
+
+int writeLinefeed()
+{
+    int ret = -1;
+    ret = fprintf(fp, "\n");
+    
+    if(ret >= 0)
+    {
         fflush(fp);
         return 0;               // 写文件成功
     }
@@ -76,5 +90,7 @@ int writeFile(const char *head,const char *str)
 
 int closeFile()
 {
+	writeFile("END","File Convert Over!");
+	writeLinefeed();   // 文本里换行 
     return fclose(fp);
 }
