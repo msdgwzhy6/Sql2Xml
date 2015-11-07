@@ -23,9 +23,9 @@
 6. tinystr.h：xml文件的字符类   
 7. tinystr.cpp：xml文件的字符类的实现   
 8. tinyxml.h：xml类    
-9. tinyxml.cpp：xml类的实现   
-10.tinyxmlerror.cpp：xml的异常   
-11.tinyxmlparser.cpp：XML的分析器   
+9. tinyxml.cpp：xml类的实现
+10.tinyxmlerror.cpp：xml的异常
+11.tinyxmlparser.cpp：XML的分析器
 12.demo.sql : 测试所用的sql文件   
    
 其中6-10号文件，是TinyXML库文件
